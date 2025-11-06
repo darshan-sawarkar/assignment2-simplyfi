@@ -21,7 +21,7 @@ function App() {
       .catch((err) => console.error("Error fetching users:", err));
   }, []);
 
-  const handleAddOrEditUser = (userData) => {
+  const handleEditUser = (userData) => {
     if (editUser) {
       setUsers((prev) =>
         prev.map((u) =>
@@ -76,7 +76,7 @@ function App() {
         <UserForm
           initialValues={editUser}
           onClose={() => setShowForm(false)}
-          onSubmit={handleAddOrEditUser}
+          onSubmit={handleEditUser}
         />
       )}
 
