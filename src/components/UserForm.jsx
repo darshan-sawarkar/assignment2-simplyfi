@@ -33,14 +33,16 @@ const UserForm = ({ onClose, onSubmit, initialValues }) => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    onSubmit(formData);
-  };
+  e.preventDefault();
+  onSubmit(formData);
+  onClose();  
+};
+
 
   return (
     <div className="modal-overlay">
       <div className="modal">
-        <h3>{initialValues ? "Edit User" : "Add New User"}</h3>
+        <h3>{initialValues ? "Edit User" : ""}</h3>
 
         <form onSubmit={handleSubmit}>
           {Object.keys(formData).map((key) => (
