@@ -22,7 +22,6 @@ function App() {
   }, []);
 
   const handleEditUser = (userData) => {
-    if (editUser) {
       setUsers((prev) =>
         prev.map((u) =>
           u.id === editUser.id
@@ -30,17 +29,6 @@ function App() {
             : u
         )
       );
-      setEditUser(null);
-    } else {
-      const newUser = {
-        id: users.length + 1,
-        ...userData,
-        company: { name: userData.company },
-        address: { street: userData.street, city: userData.city },
-      };
-      setUsers((prev) => [...prev, newUser]);
-    }
-    setShowForm(false);
   };
 
   const handleDelete = (id) => {
