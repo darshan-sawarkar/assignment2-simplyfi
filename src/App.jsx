@@ -55,15 +55,6 @@ function App() {
     <div className="app">
       <header className="header">
         <h2>User Profiles</h2>
-        {/* <button
-          className="add-btn"
-          onClick={() => {
-            setEditUser(null);
-            setShowForm(true);
-          }}
-        >
-          + Add User
-        </button> */}
       </header>
 
       <div className="cards-container">
